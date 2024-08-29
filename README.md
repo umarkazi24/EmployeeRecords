@@ -10,6 +10,7 @@ Add User: Add new users with a username and email.
 Update User: Update existing users' information.
 Delete User: Remove users from the database.
 Responsive Design: The project includes a simple responsive design for ease of use.
+
 Technologies Used:
 - Java (JDK 8+)
 - JSP (JavaServer Pages)
@@ -25,37 +26,39 @@ Before you begin, ensure you have the following installed:
 - Apache Tomcat 9.0 or higher
 - MySQL Server
 - Maven
+- MySQL connectitivy driver (JDBC driver)
+  
 Setup Instructions:
-Clone the Repository:
-
+Clone the Repository-
 bash
 Copy code
 git clone https://github.com/yourusername/user-management-system.git
 cd user-management-system
-Configure the Database:
 
+Configure the Database:
 Create a MySQL database called user_management.
 Execute the SQL script schema.sql found in the /src/main/resources directory to set up the database schema.
 Update the database connection details in src/main/resources/db.properties with your MySQL credentials.
-Build the Project:
 
+Build the Project:
 bash
 Copy code
 mvn clean install
+  
 Deploy to Apache Tomcat:
-
 Copy the generated WAR file from the target/ directory to the webapps directory of your Apache Tomcat server.
 Start the Tomcat server.
+  
 Access the Application:
+Open your web browser and go to http://localhost:8080/EmployeeRecords
 
-Open your web browser and go to http://localhost:8080/user-management-system.
-Usage
-Listing Users: Visit the homepage to view all users in the system.
-Adding a User: Click on "Add User" to fill in the details and submit.
+Usage:
+Listing Users: Click on "List Users" to view all users in the system.
+Adding a User: Click on "Add User" and fill in the details and then click submit.
 Updating a User: Click the "Update" link next to any user to modify their details.
 Deleting a User: Click the "Delete" link next to any user to remove them from the system.
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request or open an issue if you find a bug or want to add a feature.
+
+Note: In order to successfully connect to your own MySQL server, make sure to replace the code in DatabaseConfig.java with your own MySQL Database URL, Username, and Password.
 
 
 Contact
